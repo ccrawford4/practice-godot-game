@@ -7,6 +7,23 @@ on:
     branches:
       - main
 jobs:
+  Export-Project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Godot
+        uses: hendrikpawlowski/godot-actions@v1
+        with:
+          godot_version: "4.3.0"  # Update to your Godot version
+
+      - name: Export project
+        run: godot --headless --export-release "Web" exports/web/index.html
+        # "Web" should match your export preset name in Godot
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-export
+          path: exports/web
   Deploy-Production:
     runs-on: ubuntu-latest
     steps:
