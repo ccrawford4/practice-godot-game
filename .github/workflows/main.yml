@@ -2,28 +2,26 @@ name: Vercel Production Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  
 on:
   push:
     branches:
       - main
 jobs:
-  Export-Project:
-    runs-on: ubuntu-latest
+  export-web:
+    name: Web Export
+    runs-on: ubuntu-20.04
+    container:
+      image: barichello/godot-ci:4.3
     steps:
-      - name: Set up Godot
-        uses: hendrikpawlowski/godot-actions@v1
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          godot_version: "4.3.0"  # Update to your Godot version
+          lfs: true
+      - name: Web Build
+        run: |
+          godot --headless --verbose --export-release "Web" "exports/web/index.html"
 
-      - name: Export project
-        run: godot --headless --export-release "Web" exports/web/index.html
-        # "Web" should match your export preset name in Godot
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: web-export
-          path: exports/web
   Deploy-Production:
     runs-on: ubuntu-latest
     steps:
