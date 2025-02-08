@@ -37,6 +37,7 @@ func _process(delta):
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 	elif velocity.y != 0:
 		$AnimatedSprite2D.animation = &"up"
+		@warning_ignore("incompatible_ternary")
 		rotation = PI if velocity.y > 0 else 0
 
 
@@ -46,6 +47,8 @@ func start(pos):
 	show()
 	$CollisionShape2D.disabled = false
 
+func return_apples():
+	return "Apples"
 
 func _on_body_entered(_body):
 	hide() # Player disappears after being hit.
