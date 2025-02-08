@@ -1,0 +1,32 @@
+name: Export Godot Project to Web
+
+on:
+  push:
+    branches: [ "main" ]  # Adjust branch as needed
+  workflow_dispatch:     # Allows manual triggering
+
+jobs:
+  export-web:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Godot
+        uses: hendrikpawlowski/godot-actions@v1
+        with:
+          godot_version: "4.3.0"  # Update to your Godot version
+
+      - name: Create exports directory
+        run: mkdir -p exports/web
+
+      - name: Export project
+        run: godot --headless --export-release "Web" exports/web/index.html
+        # "Web" should match your export preset name in Godot
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-export
+          path: exports/web
