@@ -37,6 +37,7 @@ jobs:
           path: build/exports/web
 
   Deploy-Production:
+    needs: export-web
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
