@@ -47,7 +47,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: web
-          path: exports/web  
+          path: .vercel/output/  
           
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
