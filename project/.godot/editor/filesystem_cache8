@@ -1,16 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739002614
-export_presets.cfg::TextFile::-1::1738996693::0::1::::<><>::
+::res://::1739053716
+export_presets.cfg::TextFile::-1::1739006393::0::1::::<><>::
 hud.gd::GDScript::-1::1738992474::0::1::::<>CanvasLayer<>::
 hud.tscn::PackedScene::4947129736321201862::1738992474::0::1::::<><>::res://hud.gd<>uid://cit6gwe5px1q8::::res://fonts/Xolonium-Regular.ttf
 icon.webp::CompressedTexture2D::3626017087650301524::1738992474::1739002614::1::::<><>::
 main.gd::GDScript::-1::1738992474::0::1::::<>Node<>::
-main.tscn::PackedScene::6469066510429512572::1739000178::0::1::::<><>::res://main.gd<>uid://rkdnhqgf2hpj::::res://mob.tscn<>uid://4vwrqjegqwpj::::res://player.tscn<>uid://ccqoreueuxdb7::::res://hud.tscn<>uid://q2pf4fr8d0ks::::res://art/House In a Forest Loop.ogg<>uid://dw26fpygeag8o::::res://art/gameover.wav
+main.tscn::PackedScene::6469066510429512572::1739053716::0::1::::<><>::res://main.gd<>uid://rkdnhqgf2hpj::::res://mob.tscn<>uid://4vwrqjegqwpj::::res://player.tscn<>uid://ccqoreueuxdb7::::res://hud.tscn<>uid://q2pf4fr8d0ks::::res://art/House In a Forest Loop.ogg<>uid://dw26fpygeag8o::::res://art/gameover.wav
 mob.gd::GDScript::-1::1738992474::0::1::::<>RigidBody2D<>::
 mob.tscn::PackedScene::1214059878346897035::1738992474::0::1::::<><>::res://mob.gd<>uid://yqglrrsx7j1f::::res://art/enemyFlyingAlt_1.png<>uid://bpot8awhdn6ph::::res://art/enemyFlyingAlt_2.png<>uid://bu4221t7qpa7d::::res://art/enemyWalking_1.png<>uid://booij5t7h4efb::::res://art/enemyWalking_2.png<>uid://5lvm88ij4jqn::::res://art/enemySwimming_1.png<>uid://bng45cvsgufqc::::res://art/enemySwimming_2.png
 player.gd::GDScript::-1::1738992474::0::1::::<>Area2D<>::
 player.tscn::PackedScene::2080195385142696447::1738992474::0::1::::<><>::res://player.gd<>uid://ftkxr8r4qghp::::res://art/playerGrey_walk1.png<>uid://couyhcegeihme::::res://art/playerGrey_walk2.png<>uid://b4yyoafu8bi0q::::res://art/playerGrey_up1.png<>uid://bko65a0nd66st::::res://art/playerGrey_up2.png
-::res://art/::1738992632
+::res://art/::1739002614
 enemyFlyingAlt_1.png::CompressedTexture2D::1717947157075756173::1738992474::1739002614::1::::<><>::
 enemyFlyingAlt_2.png::CompressedTexture2D::3469367215190149497::1738992474::1739002614::1::::<><>::
 enemySwimming_1.png::CompressedTexture2D::2129671735436345225::1738992474::1739002614::1::::<><>::
@@ -24,11 +24,11 @@ playerGrey_up2.png::CompressedTexture2D::3119146248439203835::1738992474::173900
 playerGrey_walk1.png::CompressedTexture2D::390816583392065093::1738992474::1739002614::1::::<><>::
 playerGrey_walk2.png::CompressedTexture2D::5798242553287779192::1738992474::1739002614::1::::<><>::
 ::res://exports/::1738994072
-::res://exports/web/::1739000178
-index.apple-touch-icon.png::CompressedTexture2D::1565574809466249824::1739000178::1739002614::1::::<><>::
-index.icon.png::CompressedTexture2D::94258317831314549::1739000178::1739002614::1::::<><>::
-index.png::CompressedTexture2D::1403977788251905345::1739000178::1739002614::1::::<><>::
-::res://fonts/::1738992631
+::res://exports/web/::1739053702
+index.apple-touch-icon.png::CompressedTexture2D::1565574809466249824::1739053702::1739053722::1::::<><>::
+index.icon.png::CompressedTexture2D::94258317831314549::1739053702::1739053722::1::::<><>::
+index.png::CompressedTexture2D::1403977788251905345::1739053702::1739053722::1::::<><>::
+::res://fonts/::1739002614
 FONTLOG.txt::TextFile::-1::1738992474::0::1::::<><>::
 LICENSE.txt::TextFile::-1::1738992474::0::1::::<><>::
 Xolonium-Regular.ttf::FontFile::5375469398433749905::1738992474::1739002614::1::::<><>::
