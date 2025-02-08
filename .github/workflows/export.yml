@@ -1,39 +1,21 @@
-name: Export Godot Project to Web
-
+name: Vercel Production Deployment
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
   push:
-    branches: [ "main" ]  # Adjust branch as needed
-  workflow_dispatch:     # Allows manual triggering
-
+    branches:
+      - main
 jobs:
-  export-web:
+  Deploy-Production:
     runs-on: ubuntu-latest
-
     steps:
-      # - name: Checkout code
-      #   uses: actions/checkout@v4
-
-      # - name: Set up Godot
-      #   uses: hendrikpawlowski/godot-actions@v1
-      #   with:
-      #     godot_version: "4.3.0"  # Update to your Godot version
-
-      # - name: Create exports directory
-      #   run: mkdir -p exports/web
-
-      # - name: Export project
-      #   run: godot --headless --export-release "Web" exports/web/index.html
-      #   # "Web" should match your export preset name in Godot
-
-      # - name: Upload artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: web-export
-      #     path: exports/web
-
-      - uses: amondnet/vercel-action@v25 #deploy
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-          vercel-org-id: ${{ secrets.ORG_ID}}  #Required
-          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required 
-          working-directory: ./exports/web/
+      - uses: actions/checkout@v2
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
