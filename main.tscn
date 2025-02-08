@@ -26,6 +26,7 @@ grow_vertical = 2
 color = Color(0.219608, 0.372549, 0.380392, 1)
 
 [node name="Player" parent="." instance=ExtResource("3_veqnc")]
+speed = 401
 
 [node name="Player2" parent="." instance=ExtResource("3_veqnc")]
 
