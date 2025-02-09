@@ -22,6 +22,7 @@ jobs:
           lfs: true
       - name: Test
         run: |
+          echo "PWD: $PWD"
           godot -s addons/gut/gut_cmdln.gd -d --path "$PWD"/project -gdir=res://test -ginclude_subdirs -gexit_on_success --headless
 
   Deploy-Production:
