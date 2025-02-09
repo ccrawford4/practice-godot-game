@@ -3,8 +3,8 @@ extends 'res://addons/gut/test.gd'
 var Player = load("res://player.gd")
 
 func test_start():
-	var player = Player.new() # Create the player
-	var collisionShape = CollisionShape2D.new() # Create the collision shape
+	var player = autofree(Player.new()) # Create the player
+	var collisionShape = autofree(CollisionShape2D.new()) # Create the collision shape
 	collisionShape.name = "CollisionShape2D"
 	player.add_child(collisionShape) # Ensure player has this child
 	
@@ -18,7 +18,7 @@ func test_start():
 	assert_false(collisionShape.disabled)
 
 func test_return_apples():
-	var player = Player.new()
+	var player = autofree(Player.new())
 	var result = player.return_apples();
 	
 	assert_eq(result, "Apples")

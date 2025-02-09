@@ -3,3 +3,5 @@ res://test_runner.tscn
 res://test_Player.gd
 res://player.gd
 res://test/unit/test_Player.gd
+res://Utils.gd
+res://mob.gd
