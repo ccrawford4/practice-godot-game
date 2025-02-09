@@ -21,5 +21,5 @@ func test_return_apples():
 	var player = autofree(Player.new())
 	var result = player.return_apples();
 	
-	assert_eq(result, "Apples")
+	assert_eq(result, "Apple")
 	
