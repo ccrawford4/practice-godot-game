@@ -22,7 +22,7 @@ jobs:
           lfs: true
       - name: Test
         run: |
-          godot -s addons/gut/gut_cmdln.gd -d --path "$PWD"/project -gdir=res://test -ginclude_subdirs -gexit_on_success --headless
+          godot -s addons/gut/gut_cmdln.gd -d --path "$PWD"/project -gdir=res://test -ginclude_subdirs -gexit --headless
 
   Deploy-Production:
     needs: run-tests
