@@ -1,17 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739057304
+::res://::1739241556
 export_presets.cfg::TextFile::-1::1739006393::0::1::::<><>::
 hud.gd::GDScript::-1::1738992474::0::1::::<>CanvasLayer<>::
 hud.tscn::PackedScene::4947129736321201862::1738992474::0::1::::<><>::res://hud.gd<>uid://cit6gwe5px1q8::::res://fonts/Xolonium-Regular.ttf
 icon.webp::CompressedTexture2D::3626017087650301524::1738992474::1739002614::1::::<><>::
 main.gd::GDScript::-1::1738992474::0::1::::<>Node<>::
-main.tscn::PackedScene::6469066510429512572::1739057312::0::1::::<><>::res://main.gd<>uid://rkdnhqgf2hpj::::res://mob.tscn<>uid://4vwrqjegqwpj::::res://player.tscn<>uid://ccqoreueuxdb7::::res://hud.tscn<>uid://q2pf4fr8d0ks::::res://art/House In a Forest Loop.ogg<>uid://dw26fpygeag8o::::res://art/gameover.wav
-mob.gd::GDScript::-1::1738992474::0::1::::<>RigidBody2D<>::
+main.tscn::PackedScene::6469066510429512572::1739241556::0::1::::<><>::res://main.gd<>uid://rkdnhqgf2hpj::::res://mob.tscn<>uid://4vwrqjegqwpj::::res://player.tscn<>uid://ccqoreueuxdb7::::res://hud.tscn<>uid://q2pf4fr8d0ks::::res://art/House In a Forest Loop.ogg<>uid://dw26fpygeag8o::::res://art/gameover.wav
+mob.gd::GDScript::-1::1739241465::0::1::::<>RigidBody2D<>::
 mob.tscn::PackedScene::1214059878346897035::1738992474::0::1::::<><>::res://mob.gd<>uid://yqglrrsx7j1f::::res://art/enemyFlyingAlt_1.png<>uid://bpot8awhdn6ph::::res://art/enemyFlyingAlt_2.png<>uid://bu4221t7qpa7d::::res://art/enemyWalking_1.png<>uid://booij5t7h4efb::::res://art/enemyWalking_2.png<>uid://5lvm88ij4jqn::::res://art/enemySwimming_1.png<>uid://bng45cvsgufqc::::res://art/enemySwimming_2.png
-player.gd::GDScript::-1::1739057240::0::1::::<>Area2D<>::
+player.gd::GDScript::-1::1739061403::0::1::::<>Area2D<>::
 player.tscn::PackedScene::2080195385142696447::1738992474::0::1::::<><>::res://player.gd<>uid://ftkxr8r4qghp::::res://art/playerGrey_walk1.png<>uid://couyhcegeihme::::res://art/playerGrey_walk2.png<>uid://b4yyoafu8bi0q::::res://art/playerGrey_up1.png<>uid://bko65a0nd66st::::res://art/playerGrey_up2.png
-test_runner.tscn::PackedScene::2778770755649374484::1739057350::0::1::::<><>::res://test_Player.gd
-test_Player.gd::GDScript::-1::1739057350::0::1::::<>Node<>::
+test_runner.tscn::PackedScene::760106095189906457::1739241556::0::1::::<><>::res://test/unit/test_Player.gd
 ::res://addons/::1739056278
 ::res://addons/gut/::1739056421
 autofree.gd::GDScript::-1::1736527906::0::1::::<>RefCounted<>::
@@ -73,11 +72,11 @@ warnings_manager.gd::GDScript::-1::1736527906::0::1::::<>RefCounted<>::
 change_project_warnings.gd::GDScript::-1::1736527906::0::1::::<>SceneTree<>::
 gut_cli.gd::GDScript::-1::1736527906::0::1::::<>Node<>::
 optparse.gd::GDScript::-1::1736527906::0::1::::<>RefCounted<>::
-::res://addons/gut/double_templates/::1736527906
-function_template.txt::TextFile::-1::1736527906::0::1::::<><>::
-init_template.txt::TextFile::-1::1736527906::0::1::::<><>::
-script_template.txt::TextFile::-1::1736527906::0::1::::<><>::
-::res://addons/gut/fonts/::1739056421
+::res://addons/gut/double_templates/::1739241433
+function_template.txt::TextFile::-1::1739241433::0::1::::<><>::
+init_template.txt::TextFile::-1::1739241433::0::1::::<><>::
+script_template.txt::TextFile::-1::1739241433::0::1::::<><>::
+::res://addons/gut/fonts/::1739241433
 AnonymousPro-Bold.ttf::FontFile::7090493737101227053::1736527906::1739056421::1::::<><>::
 AnonymousPro-BoldItalic.ttf::FontFile::761724172175864::1736527906::1739056421::1::::<><>::
 AnonymousPro-Italic.ttf::FontFile::503495830806397342::1736527906::1739056421::1::::<><>::
@@ -90,7 +89,7 @@ LobsterTwo-Bold.ttf::FontFile::5632861098580159618::1736527906::1739056421::1:::
 LobsterTwo-BoldItalic.ttf::FontFile::3182965850633207044::1736527906::1739056421::1::::<><>::
 LobsterTwo-Italic.ttf::FontFile::7759867820021968437::1736527906::1739056421::1::::<><>::
 LobsterTwo-Regular.ttf::FontFile::2115948870915788183::1736527906::1739056421::1::::<><>::
-OFL.txt::TextFile::-1::1736527906::0::1::::<><>::
+OFL.txt::TextFile::-1::1739241433::0::1::::<><>::
 ::res://addons/gut/gui/::1739056421
 arrow.png::CompressedTexture2D::2222304255268796957::1736527906::1739056421::1::::<><>::
 BottomPanelShortcuts.gd::GDScript::-1::1736527906::0::1::::<>Window<>::
@@ -156,4 +155,5 @@ LICENSE.txt::TextFile::-1::1738992474::0::1::::<><>::
 Xolonium-Regular.ttf::FontFile::5375469398433749905::1738992474::1739002614::1::::<><>::
 ::res://test/::1739056515
 ::res://test/integration/::1739056515
-::res://test/unit/::1739056506
+::res://test/unit/::1739065383
+test_Player.gd::GDScript::-1::1739065383::0::1::::<>Node<>::
