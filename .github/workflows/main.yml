@@ -11,17 +11,15 @@ on:
 
 jobs:
   run-tests:
-    name: Unit Tests
-    runs-on: ubuntu-latest
+    name: Run Unit Tests
+    runs-on: ubuntu-20.04
+    container:
+      image: barichello/godot-ci:4.3
     steps:
-      - uses: chickensoft-games/setup-godot@v1
-        name: 🤖 Setup Godot
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          version: 4.3.1
-          
-      - name: 🔬 Verify Setup
-        run: |
-          godot --version
+          lfs: true
           
       - name: 🧑‍🔬 Generate .NET Bindings
         run: godot --path "$PWD"/project --headless --build-solutions --quit || exit 0
@@ -29,8 +27,9 @@ jobs:
       - name: Validate .godot
         run: ls -a "$PWD"/project
         
-      - name: Run tests
-        run: godot -s addons/gut/gut_cmdln.gd -d --path "$PWD"/project -gdir=res://test -ginclude_subdirs -gexit --headless
+      - name: Test
+        run: |
+          godot -s addons/gut/gut_cmdln.gd -d --path "$PWD"/project -gdir=res://test -ginclude_subdirs -gexit --headless
 
   Deploy-Production:
     needs: run-tests
