@@ -20,6 +20,7 @@ jobs:
           godot-version: '4.3.1'
           paths: 'res://test/unit'
           project_dir: './project/'
+          arguments: '--verbose'
 
   Deploy-Production:
     needs: run-tests
