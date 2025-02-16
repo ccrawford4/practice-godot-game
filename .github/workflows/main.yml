@@ -14,10 +14,23 @@ jobs:
     name: Unit Tests
     runs-on: ubuntu-latest
     steps:
-      - name: Run GUT Tests
-        uses: manleydev/run-gut-tests-action@v1.1.0
+      - uses: chickensoft-games/setup-godot@v1
+        name: 🤖 Setup Godot
         with:
-          directory: project
+          version: 4.3.1
+          
+      - name: 🔬 Verify Setup
+        run: |
+          godot --version
+          
+      - name: 🧑‍🔬 Generate .NET Bindings
+        run: godot --path "$PWD"/project --headless --build-solutions --quit || exit 0
+        
+      - name: Validate .godot
+        run: ls -a "$PWD"/project
+        
+      - name: Run tests
+        run: godot -s addons/gut/gut_cmdln.gd -d --path "$PWD"/project -gdir=res://test -ginclude_subdirs -gexit --headless
 
   Deploy-Production:
     needs: run-tests
@@ -25,16 +38,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
-
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-
       - name: Build Project Artifacts
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
-
