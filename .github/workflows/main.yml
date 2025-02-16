@@ -15,12 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: MikeSchulze/gdunit4-action@v1
+      - uses: croconut/godot-tester@v5
         with:
           godot-version: '4.3.1'
-          paths: 'res://test/unit'
-          project_dir: './project/'
-          arguments: '--verbose'
+          path: 'project'
+          test-dir: 'res://test'
 
   Deploy-Production:
     needs: run-tests
