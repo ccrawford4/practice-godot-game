@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739241556
+::res://::1739324686
 export_presets.cfg::TextFile::-1::1739006393::0::1::::<><>::
 hud.gd::GDScript::-1::1738992474::0::1::::<>CanvasLayer<>::
 hud.tscn::PackedScene::4947129736321201862::1738992474::0::1::::<><>::res://hud.gd<>uid://cit6gwe5px1q8::::res://fonts/Xolonium-Regular.ttf
@@ -145,10 +145,10 @@ playerGrey_up2.png::CompressedTexture2D::3119146248439203835::1738992474::173900
 playerGrey_walk1.png::CompressedTexture2D::390816583392065093::1738992474::1739002614::1::::<><>::
 playerGrey_walk2.png::CompressedTexture2D::5798242553287779192::1738992474::1739002614::1::::<><>::
 ::res://exports/::1738994072
-::res://exports/web/::1739053800
-index.apple-touch-icon.png::CompressedTexture2D::1565574809466249824::1739053722::1739053800::1::::<><>::
-index.icon.png::CompressedTexture2D::94258317831314549::1739053722::1739053800::1::::<><>::
-index.png::CompressedTexture2D::1403977788251905345::1739053722::1739053800::1::::<><>::
+::res://exports/web/::1739730007
+index.apple-touch-icon.png::CompressedTexture2D::1565574809466249824::1739730007::1739730105::1::::<><>::
+index.icon.png::CompressedTexture2D::94258317831314549::1739730007::1739730105::1::::<><>::
+index.png::CompressedTexture2D::1403977788251905345::1739730007::1739730105::1::::<><>::
 ::res://fonts/::1739002614
 FONTLOG.txt::TextFile::-1::1738992474::0::1::::<><>::
 LICENSE.txt::TextFile::-1::1738992474::0::1::::<><>::
