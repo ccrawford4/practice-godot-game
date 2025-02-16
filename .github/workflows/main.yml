@@ -12,14 +12,9 @@ on:
 jobs:
   run-tests:
     name: Unit Tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: croconut/godot-tester@v5
-        with:
-          godot-version: '4.3.1'
-          path: 'project'
-          test-dir: 'res://test'
+    - uses: manleydev/run-gut-tests-action@v1
+      with:
+        directory: project
 
   Deploy-Production:
     needs: run-tests
