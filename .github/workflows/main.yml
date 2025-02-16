@@ -18,8 +18,7 @@ jobs:
       - uses: MikeSchulze/gdunit4-action@v1
         with:
           godot-version: '4.3.1'
-          paths: 'res://test'
-          working-directory: './src'
+          paths: '$PWD/project/res://test'
 
   Deploy-Production:
     needs: run-tests
