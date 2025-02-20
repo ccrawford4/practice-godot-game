@@ -1,8 +1,4 @@
-name: Vercel Production Deployment
-
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+name: Build and Deploy to Production
 
 on:
   push:
@@ -32,13 +28,11 @@ jobs:
           godot -s addons/gut/gut_cmdln.gd -d --path "$PWD"/project -gdir=res://test -ginclude_subdirs -gexit --headless
     
   deploy-app:
+    needs: run-tests
     environment: Production
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Deploy the app
-        uses: digitalocean/app_action/deploy@v2
-        with:
-          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      
   

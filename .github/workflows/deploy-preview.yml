@@ -9,7 +9,29 @@ permissions:
   pull-requests: write
 
 jobs:
-  test:
+  run-tests:
+    name: Run Unit Tests
+    runs-on: ubuntu-20.04
+    container:
+      image: barichello/godot-ci:4.3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          
+      - name: 🧑‍🔬 Generate .NET Bindings
+        run: godot --path "$PWD"/project --headless --build-solutions --quit || exit 0
+        
+      - name: Validate .godot
+        run: ls -a "$PWD"/project
+        
+      - name: Test
+        run: |
+          godot -s addons/gut/gut_cmdln.gd -d --path "$PWD"/project -gdir=res://test -ginclude_subdirs -gexit --headless
+    
+  deploy-preview:
+    needs: run-tests
     name: preview
     runs-on: ubuntu-latest
     steps:
