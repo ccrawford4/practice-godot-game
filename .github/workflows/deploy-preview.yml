@@ -32,6 +32,7 @@ jobs:
     
   deploy-preview:
     needs: run-tests
+    environment: Production
     name: preview
     runs-on: ubuntu-latest
     steps:
