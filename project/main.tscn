@@ -23,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0621536, 0.395877, 0.360829, 1)
+color = Color(0.57656, 0.0329437, 0.508363, 1)
 
 [node name="Player" parent="." instance=ExtResource("3_veqnc")]
 speed = 401
